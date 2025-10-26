@@ -1,4 +1,4 @@
-# 개발환경 명령 프롬프트 추가
+# 개발환경 명령 프롬프트들을 오른쪽 마우스 메뉴에서 사용하기
 
 >  윈도우 탐색기에서 빌드도구 환경변수가 설정된 명령 프롬프트를 바로 띄울 수 있는 기능을 추가해보고 싶어서 진행했다. 
 >
@@ -35,7 +35,7 @@
 
    * [reg/shell_dev_prompt.reg](reg/shell_dev_prompt.reg) 파일 내용
      
-        ```text
+        ```reg
         Windows Registry Editor Version 5.00
         
         [HKEY_CLASSES_ROOT\Directory\Background\shell\java6_prompt]
@@ -94,8 +94,7 @@
 
 
 3. 바탕화면이나 탐색기에서 오른쪽 메뉴를 열면, 아래와 같은 화면이 나온다.
-
-![오른쪽 메뉴 열었을 때...](img/right_menu_2025-10-26.png)
+  ![오른쪽 메뉴 열었을 때...](img/right_menu_2025-10-26.png)
 
 ### 환경 변수 재정의가 필요할 경우 
 
