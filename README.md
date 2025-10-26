@@ -8,29 +8,42 @@
 
 
 
-1. `C:\` 에 CommandPrompt라는 디렉토리를 만들고,  아래 배치 파일과 하위의 setenv 디렉토리를 위치 시킨다.
-   
-   * ✨ Java 환경 명령 프롬프트
-   
-     * [java6_prompt.bat](java6_prompt.bat)
-       * Java 6, Maven 3.2.5, ant 1.9.x
-     * [java17_prompt.bat](java17_prompt.bat)
-       * Java 17, Maven 3.9.x, Gradle 9.x, ant 1.10.x
-     * [java21_prompt.bat](java21_prompt.bat)
-       * Java 21, Maven 3.9.x, Gradle 9.x, ant 1.10.x
-     * [java25_prompt.bat](java25_prompt.bat)
-       * Java 25, Gradle 9.x, ant 1.10.x
-         * Maven 4 부터 Java 25를 정식 지원해서, Maven 환경 변수는 설정하지 않음
-   * ✨Python 명령 프롬프트
-   
-     * [python_prompt.bat](python_prompt.bat)
-       * Python 3.1.3
-   * ✨CMake + LLVM + Clang 명령 프롬프트
-   
-     * [cmake_prompt.bat](cmake_prompt.bat)
-       * CMake, LLVM, Clang, MinGW-x64, Ninja는 사용가능한 최신 버전을 사용
-   
+## 개발 명령 프롬프트 정보
+
+* ✨ Java 환경 명령 프롬프트
+
+  * [java6_prompt.bat](java6_prompt.bat)
+    * Java 6, Maven 3.2.5, ant 1.9.x
+  * [java17_prompt.bat](java17_prompt.bat)
+    * Java 17, Maven 3.9.x, Gradle 9.x, ant 1.10.x
+  * [java21_prompt.bat](java21_prompt.bat)
+    * Java 21, Maven 3.9.x, Gradle 9.x, ant 1.10.x
+  * [java25_prompt.bat](java25_prompt.bat)
+    * Java 25, Gradle 9.x, ant 1.10.x
+      * Maven 4 부터 Java 25를 정식 지원해서, Maven 환경 변수는 설정하지 않음
+* ✨Python 명령 프롬프트
+
+  * [python_prompt.bat](python_prompt.bat)
+    * Python 3.1.3
+* ✨CMake + LLVM + Clang 명령 프롬프트
+
+  * [cmake_prompt.bat](cmake_prompt.bat)
+    * CMake, LLVM, Clang, MinGW-x64, Ninja는 사용가능한 최신 버전을 사용
+
+
+
+## 설치
+
+1. 이 저장소를 다운로드 또는 클론하고 해당 경로를 윈도우 정션 링크를 걸어준다.
+
+   * 로컬에 다운로드 또는 클론한 경로가 `c:\git\dev-command-prompt` 일 경우 다음과 같이 정션 링크
+
+     ```text
+     C:\>mklink /j CommandPrompt c:\git\dev-command-prompt
+     ```
+
      ​	
+
 2. shell_dev_prompt.reg 을 실행시켜 레지스트리에 등록 시킨다.
 
    * [reg/shell_dev_prompt.reg](reg/shell_dev_prompt.reg) 파일 내용
@@ -91,12 +104,13 @@
         
         * 아이콘은 특별히 쓸께 없어서 cmd의 아이콘을 그대로 사용함.
 
-
-
 3. 바탕화면이나 탐색기에서 오른쪽 메뉴를 열면, 아래와 같은 화면이 나온다.
-  ![오른쪽 메뉴 열었을 때...](img/right_menu_2025-10-26.png)
+    ![오른쪽 메뉴 열었을 때...](img/right_menu_2025-10-26.png)
 
-### 환경 변수 재정의가 필요할 경우 
+
+
+## 환경 변수 재정의(버전 재정의)가 필요할 경우 
 
 [./setenv/user](./setenv/user) 경로에 [./setenv/default](./setenv/default) 안의 배치파일들을 복사해서, 재정의한다.
 
+> user 경로에 오버라이드된 내용이 있다면 그것이 우선되는 방식이다.
