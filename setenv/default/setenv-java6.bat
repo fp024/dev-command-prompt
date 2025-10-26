@@ -1,0 +1,16 @@
+@SET JAVA_VERSION=6-oracle
+:: Java 5 이상을 지원하는 ant 버전
+@SET ANT_VERSION=1.9.x
+:: Java 6 을 지원하는 Maven 마지막 버전
+@SET MAVEN_VERSION=3.2.5
+:: Java 6 을 지원하는 Gradle 마지막 버전 (2.14.1)
+@SET GRADLE_VERSION=2.x
+@SET JAVA_HOME=C:\JDK\%JAVA_VERSION%
+@SET ANT_HOME=C:\ant\%ANT_VERSION%
+@SET MAVEN_HOME=C:\Maven\%MAVEN_VERSION%
+@SET GRADLE_HOME=C:\Gradle\%GRADLE_VERSION%
+@echo === Java %JAVA_VERSION%, ant %ANT_VERSION%, Maven %MAVEN_VERSION%, Gradle %GRADLE_VERSION% Command Prompt ===
+@echo JAVA_HOME=%JAVA_HOME%
+@echo ANT_HOME=%ANT_HOME%
+@echo MAVEN_HOME=%MAVEN_HOME%
+@echo GRADLE_HOME=%GRADLE_HOME%

@@ -1,0 +1,4 @@
+@SET PYTHON_VERSION=312
+@SET PYTHON_HOME=%LOCALAPPDATA%\Programs\Python\Python%PYTHON_VERSION%
+@echo === Python %PYTHON_VERSION% Command Prompt ===
+@echo PYTHON_HOME=%PYTHON_HOME%
