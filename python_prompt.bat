@@ -10,7 +10,7 @@ call "%BATCH_ENV_FILE%"
 REM Check if virtual environment exists and activate it
 SET VENV_ACTIVATE=%2\.venv\Scripts\activate.bat
 IF EXIST "%VENV_ACTIVATE%" (
-  echo ✨ virtual environment enabled (.venv) ✨
+  echo ✨ virtual environment enabled ^(.venv^) ✨
   %ComSpec% /s /k "SET PATH=%PYTHON_HOME%;%PYTHON_HOME%\Scripts;%PATH% && pushd "%2" && call "%VENV_ACTIVATE%""
 ) ELSE (
   %ComSpec% /s /k "SET PATH=%PYTHON_HOME%;%PYTHON_HOME%\Scripts;%PATH% && pushd "%2""
